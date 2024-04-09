@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "dev": "node 0-main.js"
+    "dev": "node 1-main.js"
   },
   "keywords": [],
   "author": "",
