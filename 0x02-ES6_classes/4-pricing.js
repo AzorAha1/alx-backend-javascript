@@ -8,7 +8,12 @@ export default class Pricing {
      * @param {any} theamount
      */
   set amount(theamount) {
-    this._amount = theamount;
+    if (typeof theamount != 'number'){
+        throw new TypeError('Amount must be a number')
+    }
+    else{
+        this._amount = theamount;
+    }
   }
 
   /**
