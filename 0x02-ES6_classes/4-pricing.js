@@ -21,7 +21,7 @@ export default class Pricing {
      * @param {any} thecurrency
      */
   set currency(thecurrency) {
-    if (typeof thecurrency !== Currency)
+    if (!(thecurrency instanceof(Currency)))
     {
         throw new TypeError('Currency must be in currency')
     }else{
