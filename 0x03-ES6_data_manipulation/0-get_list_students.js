@@ -13,7 +13,7 @@ export default function getListStudents() {
   const array3 = {
     id: 5,
     firstName: 'Serena',
-    location: 'San francisco',
+    location: 'San Francisco',
   };
   thearray.push(array1, array2, array3);
   return thearray;
