@@ -1,4 +1,3 @@
 export default function getStudentIdsSum(array) {
-  const sumofids = array.reduce((previousValue, CurrentValue) => previousValue + CurrentValue.id, 0);
-  return sumofids;
+  return array.reduce((previousValue, CurrentValue) => previousValue + CurrentValue.id, 0);
 }
