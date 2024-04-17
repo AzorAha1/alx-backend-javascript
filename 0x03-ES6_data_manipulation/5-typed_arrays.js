@@ -7,5 +7,6 @@ export default function createInt8TypedArray(length, position, value) {
   if (thevalue === value) {
     return dataview;
   }
+
   throw Error('Positon outside range');
 }
