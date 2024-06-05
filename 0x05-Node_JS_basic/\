@@ -1,0 +1,7 @@
+fs = require('fs')
+path = './database.csv'
+if (!fs.existsSync(path)) {
+	throw new Error('Cannot load the database');
+}
+const content = fs.readfileSync(path)
+console.log(content)
