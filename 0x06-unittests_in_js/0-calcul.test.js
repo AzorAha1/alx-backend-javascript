@@ -17,6 +17,8 @@ describe('calculateNumber', function() {
 		 it('should work with zero values', function () {
         		const result = calculateNumber(0, 0);
         		assert.equal(result, 0);
+			assert.equal(calculateNumber(0.9, 0.5), 2);
+			assert.equal(calculateNumber(0.4, 0.7), 1);
 		 });
 
 	});
