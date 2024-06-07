@@ -1,12 +1,14 @@
-const { expect } = require('chai');
 const calculateNumber = require('./2-calcul_chai');
+const chai = require('chai');
+const expect = chai.expect;
 
 describe('calculateNumber', function() {
   describe('sum test', function() {
     it('should add two positive numbers', function() {
-      expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(4);
+      expect(calculateNumber('SUM', 1.4, 4.5)).to.equal(6);
     });
   });
+
 
   describe('subtract test', function() {
     it('should subtract two numbers', function() {
