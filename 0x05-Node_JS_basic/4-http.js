@@ -7,5 +7,5 @@ const server = app.createServer((request, response) => {
   response.end('Hello Holberton School!');
 });
 server.listen(port, 'localhost', () => {
-  console.log(port);
+  
 });
