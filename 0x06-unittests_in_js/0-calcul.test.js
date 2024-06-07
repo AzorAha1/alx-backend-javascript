@@ -14,6 +14,9 @@ describe('calculateNumber', function() {
     it('check sum of a and b 4...', function() {
       assert.strictEqual(calculateNumber(1.5, 3.7), 6);
     });
+    it('check sum of a and b 5...', function() {
+      assert.strictEqual(calculateNumber(1, 3.2), 4)
+    });
   });
 });
 
