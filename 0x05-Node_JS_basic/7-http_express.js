@@ -11,9 +11,10 @@ app.get('/', (_, response) => {
 app.get('/students', async (_, res) => {
   try {
     const students = await countStudents(databasepath);
+    res.set('Content-Type', 'text/plain');
     res.status(200).send(`This is the list of our students\n${students}`);
   } catch (error) {
-    res.status(500).send('Cannot load the database');
+    res.status(500).set('Content-Type', 'text/plain').send('Cannot load the database');
     console.error(error);
   }
 });
