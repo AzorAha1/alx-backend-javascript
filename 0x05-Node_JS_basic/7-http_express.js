@@ -14,7 +14,7 @@ function countStudents(path) {
       }
 
       const lines = content.trim().split('\n');
-      const students = lines.slice(1).filter(line => line.trim() !== '');
+      const students = lines.slice(1).filter((line) => line.trim() !== '');
 
       let output = `Number of students: ${students.length}\n`;
       const fields = {};
@@ -47,8 +47,9 @@ app.get('/students', async (req, res) => {
     res.setHeader('Content-Type', 'text/plain');
     res.status(200).send(`This is the list of our students\n${students}`);
   } catch (error) {
-    res.status(500).setHeader('Content-Type', 'text/plain').send('Cannot load the database');
-    console.error(error);
+    res.status(500).setHeader('Content-Type', 'text/plain');
+    res.status(500).send('Cannot load the database');
+    console.error('Error:', error.message);
   }
 });
 
