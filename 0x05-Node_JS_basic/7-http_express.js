@@ -6,7 +6,7 @@ const app = express();
 const databasepath = process.argv[2];
 
 app.get('/', (_, response) => {
-  response.send('Hello Holberton School!');
+  response.send(`Hello Holberton School!\n`);
 });
 app.get('/students', async (_, res) => {
   try {
