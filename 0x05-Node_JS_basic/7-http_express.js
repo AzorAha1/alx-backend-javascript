@@ -3,14 +3,16 @@ const countStudents = require('./3-read_file_async');
 
 const port = 1245;
 const app = express();
-const databasepath = process.argv[2];
+const databasePath = process.argv[2];
 
 app.get('/', (_, response) => {
+  response.set('Content-Type', 'text/plain');
   response.send('Hello Holberton School!');
 });
+
 app.get('/students', async (_, res) => {
   try {
-    const students = await countStudents(databasepath);
+    const students = await countStudents(databasePath);
     res.set('Content-Type', 'text/plain');
     res.status(200).send(`This is the list of our students\n${students}`);
   } catch (error) {
@@ -18,7 +20,9 @@ app.get('/students', async (_, res) => {
     console.error(error);
   }
 });
+
 app.listen(port, () => {
-  console.log(port);
+  console.log(`Server is listening on port ${port}`);
 });
+
 module.exports = app;
